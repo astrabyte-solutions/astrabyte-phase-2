@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body {
+  @apply bg-brand-bg text-brand-text antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+.section-animate {
+  opacity: 0;
+  transform: translateY(30px) scale(0.985);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-animate-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.section-animate-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: var(--sa-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.section-animate-visible .section-animate-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-animate,
+  .section-animate-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

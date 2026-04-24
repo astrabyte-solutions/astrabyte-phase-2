@@ -1,0 +1,154 @@
+body { background: #0A0A0A; color: #FFFFFF; }
+::-webkit-scrollbar { display: none; }
+
+html, body {
+  overflow-x: hidden;
+}
+
+main, section {
+  max-width: 100%;
+}
+
+main img, main svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fallback so unstyled template buttons stay visible */
+main button {
+  background-color: #111111;
+}
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+i[data-fa-i2svg] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.glow-effect,
+.glow-bg,
+.purple-blur {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(98, 60, 234, 0.15) 0%, rgba(98, 60, 234, 0) 70%);
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.purple-glow,
+.bg-glow,
+.purple-gradient-bg {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(98, 60, 234, 0.18) 0%, rgba(98, 60, 234, 0) 70%);
+  filter: blur(70px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px -10px rgba(98, 60, 234, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card:hover {
+  border-color: #623cea;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  main [id="hero"],
+  main [id="hero-story"] {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 7rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  main [class*="h-[700px]"],
+  main [class*="h-[800px]"],
+  main [class*="min-h-[800px]"] {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    overflow-x: clip;
+  }
+
+  main section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  main h1 {
+    font-size: clamp(2rem, 10vw, 2.9rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  main h2 {
+    font-size: clamp(1.6rem, 7vw, 2.25rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  main h3 {
+    font-size: clamp(1.15rem, 5.2vw, 1.5rem) !important;
+  }
+
+  main p,
+  main li {
+    font-size: clamp(0.95rem, 3.8vw, 1.05rem) !important;
+    line-height: 1.55 !important;
+  }
+
+  main [class*="grid-cols-3"],
+  main [class*="grid-cols-4"],
+  main [class*="grid-cols-5"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  main [class*="w-[800px]"],
+  main [class*="w-[1000px]"],
+  main [class*="w-[1200px]"],
+  main [class*="h-[600px]"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  main .glow-effect,
+  main .glow-bg,
+  main .purple-blur,
+  main .purple-glow,
+  main .bg-glow,
+  main .purple-gradient-bg {
+    width: 240px;
+    height: 240px;
+    filter: blur(40px);
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum InquiryStatus {
+  new
+  in_progress
+  closed
+}
+
+model User {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("admin")
+}
+
+model Blog {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  title          String
+  slug           String   @unique
+  category       String
+  content        Json
+  featuredImage  String?
+  seoTitle       String?
+  seoDescription String?
+}
+
+model BlogCategory {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String   @unique
+  slug      String   @unique
+}
+
+model Service {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  name         String
+  slug         String   @unique
+  heroTitle    String
+  heroSubtitle String
+  problems     Json
+  solutions    Json
+  processSteps Json
+  benefits     Json
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String
+  slug        String   @unique
+  description String
+  features    Json
+  useCases    Json
+  pricing     String
+  cta         String
+}
+
+model Inquiry {
+  id        String        @id @default(cuid())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String
+  fileUrl   String?
+  status    InquiryStatus @default(new)
+}
