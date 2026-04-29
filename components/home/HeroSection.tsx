@@ -59,20 +59,6 @@ export default function HeroSection() {
             </button>
           </div>
 
-          <div className="mt-12 flex items-center gap-8 grayscale opacity-50">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold">50+</span>
-              <span className="text-xs text-secondary uppercase tracking-widest">Clients Served</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold">200+</span>
-              <span className="text-xs text-secondary uppercase tracking-widest">Systems Built</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold">40%</span>
-              <span className="text-xs text-secondary uppercase tracking-widest">Efficiency Boost</span>
-            </div>
-          </div>
         </div>
 
         <div className="relative group">
@@ -83,6 +69,20 @@ export default function HeroSection() {
               src="/assets/images/47e57262c6-423487fc2ee12486f581.png"
               alt="modern dashboard interface for business automation with dark glassmorphism and purple accents"
             />
+          </div>
+          <div className="mt-10 flex items-center gap-8 grayscale opacity-50">
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold">50+</span>
+              <span className="text-xs text-secondary uppercase tracking-widest">Founders & Teams</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold">200+</span>
+              <span className="text-xs text-secondary uppercase tracking-widest">Workflows Shipped</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold">40%</span>
+              <span className="text-xs text-secondary uppercase tracking-widest">Ops Lift Potential</span>
+            </div>
           </div>
         </div>
       </div>

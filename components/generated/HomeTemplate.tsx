@@ -48,7 +48,13 @@ export default function HomeTemplate() {
                   View Services
                 </Link>
               </div>
-              <div className="mt-12 flex items-center gap-8 grayscale opacity-50">
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-all"></div>
+              <div className="relative bg-card border border-border p-4 rounded-2xl shadow-2xl overflow-hidden">
+                <img className="w-full h-auto max-h-[500px] object-contain rounded-xl" src="/assets/images/47e57262c6-423487fc2ee12486f581.png" alt="modern dashboard interface for business automation with dark glassmorphism and purple accents" />
+              </div>
+              <div className="mt-10 flex items-center gap-8 grayscale opacity-50">
                 <div className="flex flex-col">
                   <span className="text-2xl font-bold">
                     50+
@@ -73,12 +79,6 @@ export default function HomeTemplate() {
                     Ops Lift Potential
                   </span>
                 </div>
-              </div>
-            </div>
-            <div className="relative group">
-              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-all"></div>
-              <div className="relative bg-card border border-border p-4 rounded-2xl shadow-2xl overflow-hidden">
-                <img className="w-full h-auto max-h-[500px] object-contain rounded-xl" src="/assets/images/47e57262c6-423487fc2ee12486f581.png" alt="modern dashboard interface for business automation with dark glassmorphism and purple accents" />
               </div>
             </div>
           </div>
