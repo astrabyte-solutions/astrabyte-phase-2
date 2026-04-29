@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <motion.section
       id="hero"
-      className="relative pt-40 pb-24 px-6 overflow-hidden h-[850px] flex items-center"
+      className="relative pt-24 pb-24 px-6 overflow-hidden min-h-[850px] flex items-center"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -79,7 +79,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-all" />
           <div className="relative bg-card border border-border p-4 rounded-2xl shadow-2xl overflow-hidden">
             <img
-              className="w-full h-[500px] object-cover rounded-xl"
+              className="w-full h-auto max-h-[500px] object-contain rounded-xl"
               src="/assets/images/47e57262c6-423487fc2ee12486f581.png"
               alt="modern dashboard interface for business automation with dark glassmorphism and purple accents"
             />

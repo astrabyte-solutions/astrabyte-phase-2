@@ -8,7 +8,7 @@ export default function HomeTemplate() {
       
       <main>
         {/* Hero Section */}
-        <section id="hero" className="relative pt-40 pb-24 px-6 overflow-hidden h-[850px] flex items-center">
+        <section id="hero" className="relative pt-24 pb-24 px-6 overflow-hidden min-h-[850px] flex items-center">
           <div className="purple-glow -top-20 -right-20"></div>
           <div className="purple-glow top-1/2 -left-40"></div>
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -78,7 +78,7 @@ export default function HomeTemplate() {
             <div className="relative group">
               <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full group-hover:bg-primary/30 transition-all"></div>
               <div className="relative bg-card border border-border p-4 rounded-2xl shadow-2xl overflow-hidden">
-                <img className="w-full h-[500px] object-cover rounded-xl" src="/assets/images/47e57262c6-423487fc2ee12486f581.png" alt="modern dashboard interface for business automation with dark glassmorphism and purple accents" />
+                <img className="w-full h-auto max-h-[500px] object-contain rounded-xl" src="/assets/images/47e57262c6-423487fc2ee12486f581.png" alt="modern dashboard interface for business automation with dark glassmorphism and purple accents" />
               </div>
             </div>
           </div>
