@@ -6,6 +6,7 @@ import { defaultMetadata, organizationSchema } from "@/lib/seo";
 import GlobalHeader from "@/components/GlobalHeader";
 import GlobalFooter from "@/components/GlobalFooter";
 import SectionAnimator from "@/components/SectionAnimator";
+import ClarityInit from "@/components/ClarityInit";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${inter.variable} font-sans bg-[#0A0A0A] text-white`}>
+        <ClarityInit />
         <SectionAnimator />
         <GlobalHeader />
         {children}
